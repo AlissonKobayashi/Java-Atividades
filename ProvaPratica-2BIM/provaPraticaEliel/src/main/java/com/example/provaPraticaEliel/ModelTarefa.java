@@ -10,16 +10,15 @@ public class ModelTarefa {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String titulo;
-    private String autor;
     private String descricao;
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private EnumTarefa status;
 
     public ModelTarefa(){}
 
-    public ModelTarefa(Long id, String titulo, String autor, String descricao, String status) {
+    public ModelTarefa(Long id, String titulo, String descricao, EnumTarefa status) {
         this.id = id;
         this.titulo = titulo;
-        this.autor = autor;
         this.descricao = descricao;
         this.status = status;
     }
@@ -40,14 +39,6 @@ public class ModelTarefa {
         this.titulo = titulo;
     }
 
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
     public String getDescricao() {
         return descricao;
     }
@@ -56,11 +47,11 @@ public class ModelTarefa {
         this.descricao = descricao;
     }
 
-    public String getStatus() {
+    public EnumTarefa getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(EnumTarefa status) {
         this.status = status;
     }
 }
