@@ -1,6 +1,5 @@
 package com.example.provaPraticaEliel.usuario;
 
-
 public class AuthDTO {
 
     private String login;

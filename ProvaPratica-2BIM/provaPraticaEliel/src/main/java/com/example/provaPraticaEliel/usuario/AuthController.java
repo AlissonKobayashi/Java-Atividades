@@ -9,15 +9,41 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
 
     @Autowired
-    private AuthService authService;
+    private RepositoryUsuario repositoryUsuario;
+
+    @Autowired
+    private JwtUtil jwtUtil;
+
 
     @PostMapping("/register")
-    public ResponseEntity<?> register(@RequestBody AuthDTO dto) {
-        return authService.registrar(dto);
+    public ResponseEntity<?> registrarUsuario(@RequestBody ModelUsuario usuario) {
+        if (repositoryUsuario.findByLogin(usuario.getLogin()).isPresent()) {
+            return ResponseEntity.badRequest().body("Usuário já existe");
+        }
+
+        ModelUsuario novoUsuario = repositoryUsuario.save(usuario);
+        return ResponseEntity.ok(novoUsuario);
     }
 
+
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody AuthDTO dto) {
-        return authService.logar(dto);
+    public ResponseEntity<?> login(@RequestBody AuthDTO login) {
+
+        return repositoryUsuario.findByLogin(login.getLogin())
+                .map(usuario -> {
+
+                    if (usuario.getSenha().equals(login.getSenha())) {
+
+                        String token = jwtUtil.generateToken(usuario.getLogin());
+
+
+                        return ResponseEntity.ok("Bearer " + token);
+                    }
+
+
+                    return ResponseEntity.status(401).body("Senha inválida");
+                })
+
+                .orElse(ResponseEntity.status(401).body("Usuário não encontrado"));
     }
 }

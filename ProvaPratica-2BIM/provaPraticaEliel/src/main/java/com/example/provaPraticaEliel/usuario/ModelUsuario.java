@@ -3,21 +3,19 @@ package com.example.provaPraticaEliel.usuario;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "TBL_USUARIO")
 public class ModelUsuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(unique = true)
-    private String uername;
+    private String login;
     private String senha;
 
     public ModelUsuario(){}
 
-    public ModelUsuario(Long id, String uername, String senha) {
-        this.id = id;
-        this.uername = uername;
+    public ModelUsuario(String login, String senha) {
+        this.login = login;
         this.senha = senha;
     }
 
@@ -29,12 +27,12 @@ public class ModelUsuario {
         this.id = id;
     }
 
-    public String getUername() {
-        return uername;
+    public String getLogin() {
+        return login;
     }
 
-    public void setUername(String uername) {
-        this.uername = uername;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getSenha() {
