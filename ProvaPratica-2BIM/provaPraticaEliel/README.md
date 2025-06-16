@@ -96,3 +96,6 @@ POST /auth/login
 Resposta: Bearer eyJhbGciOiJIUzI1NiIsInR...
 
 Copie a Resposta e em Headers cole o código em key
+
+
+###ALUNO: ALISSON SEGURA KOBAYASHI 22210867-2
