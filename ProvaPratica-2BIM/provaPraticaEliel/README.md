@@ -53,15 +53,21 @@ Base: `http://localhost:8080/tarefa`
 POST /auth/register
 
 {
+
   "login": "admin",
+  
   "senha": "admin123"
 }
+
 📌 Login
+
 POST /auth/login
+
 {
   "login": "admin",
   "senha": "admin123"
 }
+
 Resposta: Bearer eyJhbGciOiJIUzI1NiIsInR...
 
 Copie a Resposta e em Headers cole o código em key
