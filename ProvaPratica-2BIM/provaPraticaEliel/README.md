@@ -58,10 +58,15 @@ Base: `http://localhost:8080/tarefa`
 ### 🔸 Exemplo de corpo para POST/PUT:
 
 {
+
   "titulo": "Estudar Spring",
+  
   "descricao": "Revisar anotações de JWT",
+  
   "status": "PENDENTE"
+  
 }
+
 
 #### 📌 Registro
 
