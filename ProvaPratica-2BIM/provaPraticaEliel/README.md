@@ -27,7 +27,6 @@ src/
 ├── ModelTarefa.java
 ├── RepositoryTarefa.java
 └── ServiceTarefa.java
-
 ---
 
 ### ✅ Endpoints de autenticação
