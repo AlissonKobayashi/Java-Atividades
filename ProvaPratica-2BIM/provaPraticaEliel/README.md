@@ -12,21 +12,17 @@
 ## 📁 Estrutura do Projeto
 
 src/
-└── main/
-└── java/
-└── com/example/provaPraticaEliel/
-├── usuario/
-│ ├── AuthController.java
-│ ├── AuthDTO.java
-│ ├── ModelUsuario.java
-│ ├── RepositoryUsuario.java
-│ └── JwtUtil.java
-│
-├── ControllerTarefa.java
-├── EnumTarefa.java
-├── ModelTarefa.java
-├── RepositoryTarefa.java
-└── ServiceTarefa.java
+├── main/
+│   ├── java/
+│   │   └── com/example/gerenciador/
+│   │       ├── controller/
+│   │       ├── dto/
+│   │       ├── model/
+│   │       ├── repository/
+│   │       ├── security/
+│   │       └── service/
+│   └── resources/
+│       └── application.properties
 ---
 
 ### ✅ Endpoints de autenticação
