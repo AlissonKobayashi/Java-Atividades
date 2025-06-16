@@ -12,20 +12,35 @@
 ## 📁 Estrutura do Projeto
 
 src/
+
 └── main/
+
     └── java/
+    
         └── com/example/provaPraticaEliel/
+        
             ├── usuario/
+            
             │ ├── AuthController.java
+            
             │ ├── AuthDTO.java
+            
             │ ├── ModelUsuario.java
+            
             │ ├── RepositoryUsuario.java
+            
             │ └── JwtUtil.java
+            
             ├── ControllerTarefa.java
+            
             ├── EnumTarefa.java
+            
             ├── ModelTarefa.java
+            
             ├── RepositoryTarefa.java
+            
             └── ServiceTarefa.java
+
             
 
 ### ✅ Endpoints de autenticação
@@ -57,6 +72,7 @@ POST /auth/register
   "login": "admin",
   
   "senha": "admin123"
+  
 }
 
 📌 Login
@@ -64,9 +80,13 @@ POST /auth/register
 POST /auth/login
 
 {
+
   "login": "admin",
+  
   "senha": "admin123"
+  
 }
+
 
 Resposta: Bearer eyJhbGciOiJIUzI1NiIsInR...
 
