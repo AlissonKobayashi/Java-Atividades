@@ -12,25 +12,44 @@
 ## 📁 Estrutura do Projeto
 
 src/
+
 └── main/
+
 └── java/
+
 └── com/example/provaPraticaEliel/
+
 ├── usuario/
+
 │ ├── AuthController.java
+
 │ ├── AuthDTO.java
+
 │ ├── ModelUsuario.java
+
 │ ├── RepositoryUsuario.java
+
 │ └── JwtUtil.java
+
 │
+
 ├── ControllerTarefa.java
+
 │
 └── EnumTarefa.java
+
 │
+
 ├── ModelTarefa.java
+
 │
+
 ├── RepositoryTarefa.java
+
 │
+
 └── ServiceTarefa.java
+
 
 ---
 
